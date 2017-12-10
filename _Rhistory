@@ -1,0 +1,181 @@
+print ('hello world')
+mean(1:20)
+x <- (1:20)
+mean(x)
+source('~/.active-rstudio-document', echo=TRUE)
+WriteOnNotebook <- function() {
+count <- 0
+repeat {
+count <- count + 1
+print(paste("writing on page number",count))
+}
+}
+WriteOnNotebook()
+WriteOnNotebook <- function(total.page.count) {
+count <- 0
+repeat {
+count <- count + 1
+if(count > total.page.count){
+print("page finished")
+break
+}
+print(paste("writing on page number",count))
+}
+}
+WriteOnNotebook(total.page.count = 10)
+WriteOnNotebook <- function(total.page.count) {
+count <- 0
+repeat {
+count <- count + 1
+if(count > total.page.count){
+print("page finished")
+break
+}
+if(count %% 2 == 0){
+print(paste("page skipping number", count))
+next
+}
+print(paste("writing on page number",count))
+}
+}
+WriteOnNotebook(total.page.count = 10)
+WriteOnNotebook <- function(total.page.count) {
+count <- 0
+while(count < total.page.count){
+count <- count + 1
+print(paste("writing on page number",count))
+}
+print("page finished")
+}
+WriteOnNotebook(total.page.count = 10)
+WriteOnNotebook <- function(total.page.count){
+for(count in 1:total.page.count){
+print(paste("writing on the page, count"))
+}
+}
+WriteOnNotebook(total.page.count = 10)
+WriteOnNotebook <- function(total.page.count){
+for(count in 1:total.page.count){
+print(paste("writing on the page", count))
+}
+}
+WriteOnNotebook(total.page.count = 10)
+student.marks <- matrix(c(70L, 75L, 72L, 80L, 50L,
+80L, 85L, 60L, 72L, 88L,
+60L, 70L, 87L, 55L, 90L,
+85L, 70L, 74L, 86L, 78L,), ncol = 5, nrow = 4,
+byrow = true)
+student.marks <- matrix(c(70L, 75L, 72L, 80L, 50L,
+80L, 85L, 60L, 72L, 88L,
+60L, 70L, 87L, 55L, 90L,
+85L, 70L, 74L, 86L, 78L), ncol = 5, nrow = 4,
+byrow = true)
+student.marks <- matrix(c(70L, 75L, 72L, 80L, 50L,
+80L, 85L, 60L, 72L, 88L,
+60L, 70L, 87L, 55L, 90L,
+85L, 70L, 74L, 86L, 78L), ncol = 5, nrow = 4,
+byrow = TRUE)
+student.marks <- matrix(c(70L, 75L, 72L, 80L, 50L,
+80L, 85L, 60L, 72L, 88L,
+60L, 70L, 87L, 55L, 90L,
+85L, 70L, 74L, 86L, 78L), ncol = 5, nrow = 4,
+byrow = TRUE)
+rownames(student.marks) <- c("Raj", "Rahul", "Priya", "Poonam")
+colnames(studnet.marks) <- c("Physics", "Chemistry", "Mathematics", "Biology",
+"History")
+colnames(student.marks) <- c("Physics", "Chemistry", "Mathematics", "Biology",
+"History")
+rownames(student.marks) <- c("Raj", "Rahul", "Priya", "Poonam")
+colnames(student.marks) <- c("Physics", "Chemistry", "Mathematics", "Biology",
+"History")
+student.marks
+apply(student.marks,1,sum)
+apply(student.marks, 1, max) #Top marks from each student
+apply(student.marks,2,mean)
+apply(student.marks,2,max)
+rownames(student.marks)[apply(student.marks,2,which.max)]
+apply(student.marks,1:2, function(x) x + 2)
+library()
+packages <- install.packages()
+packages <- installed.packages()
+view(packages)
+View(packages)
+search()
+library("Parallel")
+library("parallel")
+library("parallel")
+library(parallel)
+search()
+detach(package:parallel, unload=TRUE)
+if(!require ("newpackage")){
+}
+install.packages("ggplot2")
+1 2 6
+1
+1:
+1 2 6
+install.package(c("ggplot2", "RandomForest", "RColorBrewer"))
+install.packages(c("ggplot2", "RandomForest", "RColorBrewer"))
+install.packages(devtools)
+install.packages("devtools")
+library(devtools)
+install_github("slidify", "ramnathv")
+getwd() #gets the working directory
+set("C:\\pluralsight")
+set("C:/pluralsight")
+setwd("C:\\pluralsight")
+setwd("C:/pluralsight")
+setwd("C:\\pluralsight\\Datasets")
+file <- file.path("datasets","01sample.csv")
+my.data <- read.csv(file)
+file <- file.path("Datasets","01Sample.csv")
+my.data <- read.csv(file)
+setwd("C:/pluralsight/Datasets")
+file <- file.path("Datasets","01Sample.csv")
+my.data <- read.csv(file)
+setwd("C:/pluralsight/Datasets")
+getwd()
+file <- file.path("Datasets","01Sample.csv")
+my.data <- read.csv(file)
+file <- file.path("Datasets","01Sample.csv")
+my.data <- read.csv(file)
+my.data <- read.csv(file)
+getwd()
+setwd("C:\\pluralsight")
+file <- file.path("Datasets","01Sample.csv")
+my.data <- read.csv(file)
+str(my.data)
+my.data
+setwd("C:/pluralsight")
+file <- file.path("Datasets", "02Sample.txt")
+my.data <- read.table(file,
+header = TRUE,
+skip = 1,
+colClasses = c("character","factor", "numeric", "integer", "integer"))
+str(my.data)
+my.data <- read.table(file,
+header = TRUE,
+skip = 1,
+colClasses = c("character","factor", "numeric", "integer", "integer"))
+str(my.data)
+my.data
+getwd()
+URL <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+getwd()
+local <- file.path("Datasets","01Sample.csv")
+download.file(url,local)
+local <- file.path("Datasets","03DownloadFile.csv")
+download.file(url,local)
+local <- file.path("Datasets","03DownloadFile.csv")
+download.file(url,local)
+local <- file.path("Datasets","03DownloadFile.data")
+download.file(url,local)
+local <- file.path("Datasets","03DownloadedFile.data")
+download.file(url,local)
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+getwd()
+local <- file.path("Datasets","03DownloadedFile.data")
+download.file(url,local)
+my.data <- read.table(local,sep = ",")
+str(my.data)
+my.data

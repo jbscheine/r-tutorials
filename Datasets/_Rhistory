@@ -1,0 +1,512 @@
+x = ~Runtime,
+data = movies,
+main = "Distribution of Runtimes",
+xlab = "")
+print(
+x = dot,
+position = c(0, .75, 1, 1),
+more = TRUE
+)
+box <- bwplot( #bw = box and whisper
+x = ~Runtime,
+data = movies,
+xlab = "")
+print(
+x = box,
+position = c(0, .50, 1, .75),
+more = TRUE
+)
+hist <- histogram(
+x = ~Runtime,
+data = movies,
+xlab = "",
+scales = list(y = list(draw = FALSE)))
+print(
+x = hist,
+position = c(0, .25, 1, .50),
+more = TRUE
+)
+dot <- dotplot(
+x = ~Runtime,
+data = movies,
+main = "Distribution of Runtimes",
+xlab = "")
+print(
+x = dot,
+position = c(0, .75, 1, 1),
+more = TRUE
+)
+box <- bwplot( #bw = box and whisper
+x = ~Runtime,
+data = movies,
+xlab = "")
+print(
+x = box,
+position = c(0, .50, 1, .75),
+more = TRUE
+)
+hist <- histogram(
+x = ~Runtime,
+data = movies,
+xlab = "",
+scales = list(y = list(draw = FALSE)))
+print(
+x = hist,
+position = c(0, .25, 1, .50),
+more = TRUE
+)
+density <- denistyplot(
+x = ~Runtime,
+data = movies,
+xlab = "",
+scales = list(y = list(draw = FALSE)))
+print(
+x = density,
+position = c(0, 0, 1, .25),
+more = TRUE
+)
+density <- denistyplot(
+x = ~Runtime,
+data = movies,
+ylab = "",
+scales = list(y = list(draw = FALSE)))
+density <- densityplot(
+x = ~Runtime,
+data = movies,
+ylab = "",
+scales = list(y = list(draw = FALSE)))
+print(
+x = density,
+position = c(0, 0, 1, .25),
+more = TRUE
+)
+hist <- histogram(
+x = ~Runtime,
+data = movies,
+ylab = "",
+scales = list(y = list(draw = FALSE)))
+print(
+x = hist,
+position = c(0, .25, 1, .50),
+more = TRUE
+)
+library(ggplot)
+library(ggplot2)
+library(ggplot2)
+ggplot(
+data = movies,
+aes(x = Runtime, stat = "count")) +
+geom_dotplot(binwidth = 1) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+ggplot(
+data = movies,
+aes(x = Runtime, stat = "count")) +
+geom_dotplot(binwidth = 1, stackdir = "center") +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+ggplot(
+data = movies,
+aes(x = Runtime, y = Runtime)) +
+geom_boxplot() +
+coord_flip() +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("") +
+ylab("Runtime (Minutes)") +
+theme(
+axis.text.y = element_blank(),
+axis.ticks.y = element_blank(),
+)
+ggplot(
+data = movies,
+aes(x = Runtime) +
+geom_histogram(binwidth = 10),
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+)
+ggplot(
+data = movies,
+aes(x = Runtime) +
+geom_histogram(binwidth = 10) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+)
+ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_histogram(binwidth = 10) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_density() +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+dev.off() #turns off the plot window
+library(grid)
+viewport <- viewport(
+layout = grid.layout(4,11))
+pushViewport(Viewport)
+pushViewport(viewport)
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limit = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dev.off() #turns off the plot window
+library(grid)
+viewport <- viewport(
+layout = grid.layout(4,11))
+pushViewport(viewport)
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = 0.25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+head(movies)
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = 0.25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = 2.5) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = 2.5) +
+scale_x_continuous(limits = c(250,0)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = 2.5) +
+#scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dev.off() #turns off the plot window
+library(grid)
+viewport <- viewport(
+layout = grid.layout(4,11))
+viewport <- viewport(
+layout = grid.layout(4,1))
+pushViewport(viewport)
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = 2.5) +
+#scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = 2.5) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+ggplot(
+data = movies,
+aes(x = Runtime, y = Runtime)) +
+geom_boxplot() +
+coord_flip() +
+scale_y_continuous(
+limits = c(0,250)) +
+xlab("")
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+viewport <- viewport(
+layout = grid.layout(4,1))
+pushViewport(viewport)
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+box <- ggplot(
+data = movies,
+aes(x = Runtime, y = Runtime)) +
+geom_boxplot() +
+coord_flip() +
+scale_y_continuous(
+limits = c(0,250)) +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 2,
+layout.pos.col = 1))
+dev.off() #turns off the plot window
+library(grid)
+viewport <- viewport(
+layout = grid.layout(4,1))
+pushViewport(viewport)
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+box <- ggplot(
+data = movies,
+aes(x = Runtime, y = Runtime)) +
+geom_boxplot() +
+coord_flip() +
+scale_y_continuous(
+limits = c(0,250)) +
+xlab("")
+print(
+x = box,
+vp = viewport(
+layout.pos.row = 2,
+layout.pos.col = 1))
+ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_histogram(binwidth = 10) +
+scale_x_continuous(
+limits = c(0,250)) +
+xlab("")
+hist <- ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_histogram(binwidth = 10) +
+scale_x_continuous(
+limits = c(0,250)) +
+xlab("")
+dev.off() #turns off the plot window
+library(grid)
+viewport <- viewport(
+layout = grid.layout(4,1))
+pushViewport(viewport)
+dot <- ggplot(
+data = movies,
+aes(x = Runtime, ..count..)) +
+geom_dotplot(binwidth = .25) +
+scale_x_continuous(limits = c(0,250)) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("")
+print(
+x = dot,
+vp = viewport(
+layout.pos.row = 1,
+layout.pos.col = 1))
+box <- ggplot(
+data = movies,
+aes(x = Runtime, y = Runtime)) +
+geom_boxplot() +
+coord_flip() +
+scale_y_continuous(
+limits = c(0,250)) +
+xlab("")
+print(
+x = box,
+vp = viewport(
+layout.pos.row = 2,
+layout.pos.col = 1))
+hist <- ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_histogram(binwidth = 10) +
+scale_x_continuous(
+limits = c(0,250)) +
+xlab("")
+print(
+x = hist,
+vp = viewport(
+layout.pos.row = 3,
+layout.pos.col = 1))
+density <- ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_density() +
+scale_x_continuous(
+limits = c(0,250)) +
+xlab("Runtime (Minutes)")
+print(
+x = density,
+vp = viewport(
+layout.pos.row = 4,
+layout.pos.col = 1))
+ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_histogram(binwidth = 10) +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+ggplot(
+data = movies,
+aes(x = Runtime)) +
+geom_density() +
+ggtitle("Distribution of Movie Runtimes") +
+xlab("Runtime (Minutes)")
+setwd("C:/pluralsight/Datasets")
+movies <- read.csv("Movies.csv")
+head(movies)
+awards <- table(movies$Awards,
+movies$Rating)
+print(awards)
+barplot(
+height = awards,
+besides = TRUE,
+main = "Count of Movies by Ratings and Awards",
+xlab = "Rating",
+ylab = "count of movies",
+legend = c("No", "Yes"),
+args.legend = list(x = "topleft",
+title = "Awards"))
+barplot(
+height = awards,
+beside = TRUE,
+main = "Count of Movies by Ratings and Awards",
+xlab = "Rating",
+ylab = "count of movies",
+legend = c("No", "Yes"),
+args.legend = list(x = "topleft",
+title = "Awards"))
+barplot(
+height = awards,
+main = "Count of Movies by Ratings and Awards",
+xlab = "Rating",
+ylab = "count of movies",
+legend = c("No", "Yes"),
+args.legend = list(x = "topleft",
+title = "Awards"))
+head(awards)
+head(proportions)
+o
+proportions <- apply(awards,2,function(x) {x/sum(x)}) #Used to convert columns to a number between 1 & 0
+head(proportions)
+barplot(
+height = proportions,
+main = "Proportion of Movies by Rating & Award",
+xlab = "Rating",
+ylab = "proportion of movies",
+legend = c("no","yes"),
+args.legend = list(x = "topleft",
+title = "Awards")
+)
+awards <- table(movies$Rating,
+movies$Awards)
+colnames(awards) <- c("No", "yes")
+print(awards)
+spineplot(x = awards,
+main = "Proportion of Movies by rating & Awards",
+xlab = "Rating",
+ylab = "Awards")
+mosaicplot(x = awards,
+main = "Proportion of Movies by rating & Awards",
+xlab = "Rating",
+ylab = "Awards")
